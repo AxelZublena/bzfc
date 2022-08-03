@@ -11,7 +11,7 @@
 <li class="my-20 mx-10 inline-block">
 	<a {href}
 		><div class={div}>
-			<img class="relative left-4 top-5" {src} alt={title + '-image'} />
+			<img class="relative left-1/4 top-5 h-10 w-10" {src} alt={title + '-image'} />
 		</div>
 		<h6 class={header}>{title}</h6></a
 	>
