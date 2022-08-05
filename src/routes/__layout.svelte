@@ -75,7 +75,7 @@
 	<div
 		class="relative z-30 h-[80px] my-0 mx-auto bg-yellow-400 nav:h-fit nav:m-0 nav:bg-transparent"
 	>
-		<nav class="text-center">
+		<nav class="text-center mt-6 nav:pt-0 nav:mt-0">
 			<ul class="p-0 m-0 text-center">
 				<NavElement
 					title="BZFC"
