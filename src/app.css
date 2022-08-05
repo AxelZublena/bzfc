@@ -7,3 +7,10 @@ body {
 	font-family: 'Montserrat', sans-serif;
 }
 
+p {
+	@apply mx-6 nav:mx-[120px] text-gray-700 text-sm font-light leading-6
+}
+
+h4 {
+	@apply text-xl font-medium uppercase tracking-wider mb-[30px]
+}

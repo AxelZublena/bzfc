@@ -3,7 +3,7 @@
 </script>
 
 <Card>
-	<div class="text-left -mt-6 px-8 grid grid-cols-3 gap-x-4 w-full">
+	<div class="text-left -mt-6 px-8 grid grid-cols-1 nav:grid-cols-3 gap-x-4 w-full">
 		<div class="col-span-1">
 			<p class="text-sm text-gray-800 font-light leading-6 pr-12">
 				Maecenas imperdiet sagittis lacus, ut consequat velit iaculis id. Praesent eu consequat
