@@ -8,7 +8,7 @@ body {
 }
 
 p {
-	@apply mx-6 nav:mx-[120px] text-gray-700 text-sm font-light leading-6
+	@apply mx-6 nav:mx-[120px] text-gray-700 text-sm font-light leading-6;
 }
 
 h4 {
