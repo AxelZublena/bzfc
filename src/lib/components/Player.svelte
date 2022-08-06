@@ -24,11 +24,11 @@
 		<p><b>Age:</b> {player.age}</p>
 		<p><b>Nationalite:</b> {@html player.country}</p>
 	</div>
-	<button
-		id={player.id}
-		class="inline-block py-[12px] px-[18px] font-normal rounded-md bg-red-500 text-white"
-		on:click={del}><a href="/equipe">Delete</a></button
-	>
+	<!-- <button -->
+	<!-- 	id={player.id} -->
+	<!-- 	class="inline-block py-[12px] px-[18px] font-normal rounded-md bg-red-500 text-white" -->
+	<!-- 	on:click={del}><a href="/equipe">Delete</a></button -->
+	<!-- > -->
 </div>
 
 <style>
