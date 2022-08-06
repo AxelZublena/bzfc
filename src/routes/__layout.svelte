@@ -14,8 +14,8 @@
 <script>
 	import '../app.css';
 
-	import NavElement from '$lib/NavElement.svelte';
-	import Page from '$lib/Page.svelte';
+	import NavElement from '$lib/components/NavElement.svelte';
+	import Page from '$lib/components/Page.svelte';
 
 	export let segment;
 
@@ -24,48 +24,45 @@
 			title: 'BZFC',
 			text: "Plus fort que l'effort",
 			href: '/',
-			src: 'img/BZFC_logo_transparent.png'
+			src: '/img/BZFC_logo_transparent.png'
 		},
 		equipe: {
 			title: "L'equipe",
 			text: "Text pour l'equipe",
 			href: '/equipe',
-			src: 'img/about-icon.png'
+			src: '/img/about-icon.png'
 		},
 		historique: {
 			title: 'Historique',
 			text: "Text pour l'historique",
 			href: '/historique',
-			src: 'img/hist-icon.png'
+			src: '/img/hist-icon.png'
 		},
 		photos: {
 			title: 'Photos',
 			text: 'Text pour les photos',
 			href: '/photos',
-			src: 'img/projects-icon.png'
+			src: '/img/projects-icon.png'
 		},
 		contact: {
 			title: 'Contact',
 			text: 'Text pour le contact',
 			href: '/contact',
-			src: 'img/contact-icon.png'
+			src: '/img/contact-icon.png'
 		}
 	};
 
 	function checkRoute(segment) {
-		switch (segment) {
-			case '/':
-				return contents.bzfc;
-			case '/equipe':
-				return contents.equipe;
-			case '/historique':
-				return contents.historique;
-			case '/photos':
-				return contents.photos;
-			case '/contact':
-				return contents.contact;
-			default:
-				return {};
+		if (segment.includes('equipe')) {
+			return contents.equipe;
+		} else if (segment.includes('historique')) {
+			return contents.historique;
+		} else if (segment.includes('photos')) {
+			return contents.photos;
+		} else if (segment.includes('contact')) {
+			return contents.contact;
+		} else {
+			return contents.bzfc;
 		}
 	}
 	$: content = checkRoute(segment);
@@ -81,43 +78,41 @@
 					title="BZFC"
 					selected={content.href == '/' ? true : false}
 					href="/"
-					src="img/BZFC_logo_transparent.png"
+					src="/img/BZFC_logo_transparent.png"
 				/>
 				<NavElement
 					title="Equipe"
-					selected={content.href == '/equipe' ? true : false}
+					selected={content.href.includes('/equipe') ? true : false}
 					href="/equipe"
-					src="img/about-icon.png"
+					src="/img/about-icon.png"
 				/>
 				<NavElement
 					title="Historique"
-					selected={content.href == '/historique' ? true : false}
+					selected={content.href.includes('/historique') ? true : false}
 					href="/historique"
-					src="img/hist-icon.png"
+					src="/img/hist-icon.png"
 				/>
 				<NavElement
 					title="Photos"
-					selected={content.href == '/photos' ? true : false}
+					selected={content.href.includes('/photos') ? true : false}
 					href="/photos"
-					src="img/projects-icon.png"
+					src="/img/projects-icon.png"
 				/>
 				<NavElement
 					title="Contact"
-					selected={content.href == '/contact' ? true : false}
+					selected={content.href.includes('/contact') ? true : false}
 					href="/contact"
-					src="img/contact-icon.png"
+					src="/img/contact-icon.png"
 				/>
 			</ul>
 		</nav>
 		<Page {content}>
 			<slot />
 		</Page>
-		<!-- <Footer /> -->
 	</div>
 
 	<video autoplay loop muted class="">
-		<source src="videos/video.mp4" type="video/mp4" />
-		<source src="videos/video.ogg" type="video/ogg" />
+		<source src="/videos/video.mp4" type="video/mp4" />
 		Your browser does not support the video tag.
 	</video>
 </section>
