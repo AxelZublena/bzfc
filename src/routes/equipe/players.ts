@@ -31,3 +31,15 @@ export async function POST({ request }) {
 		}
 	};
 }
+export async function DELETE({ url }) {
+	const id = await url.searchParams.get("id"); // or .json(), or .text(), etc
+	const del = DB.prepare('DELETE FROM players WHERE id = ' + id);
+	del.run()
+
+	return {
+		status: 303,
+		headers: {
+			location: `/equipe`,
+		},
+	};
+}
