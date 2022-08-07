@@ -4,7 +4,6 @@ import DB from '$lib/db';
 export async function GET({ params }) {
 	const players = await DB`SELECT * FROM players`;
 
-
 	if (players) {
 		return {
 			status: 200,
@@ -18,11 +17,10 @@ export async function GET({ params }) {
 	};
 }
 export async function POST({ request }) {
-	const data = await request.formData(); // or .json(), or .text(), etc
-	const playerInfo = Object.fromEntries(data);
-	await DB`INSERT INTO players (name, country, position, age, description) VALUES (${playerInfo.name}, ${playerInfo.country}, ${playerInfo.position}, ${playerInfo.age}, ${playerInfo.description})`;
-	// insert.run(player)
-
+	// const data = await request.formData(); // or .json(), or .text(), etc
+	// const playerInfo = Object.fromEntries(data);
+	const playerInfo = await request.json(); // or .json(), or .text(), etc
+	await DB`INSERT INTO players (name, country, position, age, description, img) VALUES (${playerInfo.name}, ${playerInfo.country}, ${playerInfo.position}, ${playerInfo.age}, ${playerInfo.description}, ${playerInfo.file.text})`;
 
 	return {
 		status: 303,
