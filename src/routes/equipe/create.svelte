@@ -61,7 +61,6 @@
 			}
 		} catch (err) {
 			if (err.message == "Cannot read properties of undefined (reading '0')") {
-				errorMessage = 'Veuillez selectioner une image';
 				areFieldsFilled = false;
 			} else {
 				console.error(err.message);
