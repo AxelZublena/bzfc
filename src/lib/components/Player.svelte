@@ -1,6 +1,5 @@
 <script>
 	export let player = {};
-	import { goto } from '$app/navigation';
 
 	async function del() {
 		let res = await fetch('/equipe/players?id=' + player.id, {
