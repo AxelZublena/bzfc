@@ -2,19 +2,26 @@ import DB from '$lib/db';
 
 /** @type {import('./__types/[id]').RequestHandler} */
 export async function GET({ params }) {
-	const photos = await DB`SELECT * FROM photos`;
 
-	if (photos) {
+	try {
+		const photos = await DB`SELECT * FROM photos`;
+
+		if (photos) {
+			return {
+				status: 200,
+				headers: {},
+				body: { photos }
+			};
+		}
+	}
+	catch (err) {
 		return {
-			status: 200,
-			headers: {},
-			body: { photos }
+			status: 500,
+			message: err.message
 		};
+
 	}
 
-	return {
-		status: 404
-	};
 }
 export async function POST({ request }) {
 	const photo = await request.json(); // or .json(), or .text(), etc
