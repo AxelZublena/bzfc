@@ -62,6 +62,9 @@
 	$: content = checkRoute(segment);
 </script>
 
+<svelte:head>
+	<title>{content.title}</title>
+</svelte:head>
 <section class="relative flex h-screen justify-center overflow-x-hidden">
 	<div
 		class="relative z-30 h-[80px] my-0 mx-auto bg-yellow-400 nav:h-fit nav:m-0 nav:bg-transparent"
