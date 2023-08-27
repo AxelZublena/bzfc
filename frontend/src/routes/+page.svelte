@@ -1,17 +1,26 @@
 <script lang="ts">
-	import Card from '../components/Card.svelte';
-	import Welcome from '../components/Welcome.svelte';
-	import type { PageData } from './$types';
-
-	export let data: PageData;
+	import Card from '$lib/components/Card.svelte';
 </script>
 
-<section>
-	{#if data.posts.length}
-		{#each data.posts as post}
-			<Card {post} />
-		{/each}
-	{:else}
-		<Welcome />
-	{/if}
-</section>
+<Card>
+	<h4>Qui sommes nous ?</h4>
+	<p>
+		Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis ratione maiores possimus
+		eveniet quas exercitationem inventore, recusandae molestias. Quisquam expedita quis ducimus
+		debitis dicta sint reprehenderit, quaerat quibusdam natus incidunt.
+	</p>
+
+	<div class="nav:grid nav:grid-cols-2">
+		<div class="w-1/3 nav:w-72 mx-auto pt-10">
+			<img src="/img/BZFC_logo.png" alt="BZFC_logo" />
+		</div>
+		<iframe
+			src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=Europe%2FParis&showTitle=0&showNav=1&showPrint=0&showTabs=0&hl=fr&showCalendars=0&showTz=0&title=BZFC&src=NTQ2NTcyNTlkZTJmZDk2MDE4MDUxYzE1ODMxMWQ3OWJhZTNjYWVkMDI2YjQzMWRiNjU2MjQ4ODk2OTU0ZDg0NkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23AD1457"
+			style="border-width:0"
+			frameborder="0"
+			scrolling="no"
+			title="BZFC's calendar"
+			class="w-full h-full"
+		/>
+	</div>
+</Card>
