@@ -1,11 +1,17 @@
 <script lang="ts">
+	import { urlFor } from '$lib/utils/image';
 	import type { IPlayer } from '$lib/interfaces/player';
+
 	export let player: IPlayer;
 </script>
 
 <div class="sm:flex gap-10 mx-8 mb-8">
 	<div class="w-1/6 mx-auto sm:mx-0">
-		<img src={player.img} alt="BZFC_logo" class="object-cover rounded-sm mx-auto max-h-1/2" />
+		<img
+			src={urlFor(player.img).url()}
+			alt="BZFC_logo"
+			class="object-cover rounded-sm mx-auto max-h-1/2"
+		/>
 	</div>
 	<div class="sm:w-5/6 text-left">
 		<h5>{player.name}</h5>
