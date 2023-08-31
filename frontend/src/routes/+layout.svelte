@@ -7,38 +7,38 @@
 	export let data: any;
 	$: segment = data.segment;
 
-	const contents = {
-		bzfc: {
+	const contents: Route[] = [
+		{
 			title: 'BZFC',
 			text: "Plus fort que l'effort",
 			href: '/',
 			src: '/img/BZFC_logo_transparent.png'
 		},
-		equipe: {
+		{
 			title: "L'equipe",
 			text: "Text pour l'equipe",
 			href: '/equipe',
 			src: '/img/about-icon.png'
 		},
-		historique: {
-			title: 'Historique',
-			text: "Text pour l'historique",
-			href: '/historique',
+		{
+			title: 'Matches',
+			text: 'Text pour les matches',
+			href: '/matches',
 			src: '/img/hist-icon.png'
 		},
-		photos: {
+		{
 			title: 'Photos',
 			text: 'Text pour les photos',
 			href: '/photos',
 			src: '/img/projects-icon.png'
-		},
-		contact: {
-			title: 'Contact',
-			text: 'Text pour le contact',
-			href: '/contact',
-			src: '/img/contact-icon.png'
 		}
-	};
+		/* contact: { */
+		/* 	title: 'Contact', */
+		/* 	text: 'Text pour le contact', */
+		/* 	href: '/contact', */
+		/* 	src: '/img/contact-icon.png' */
+		/* } */
+	];
 
 	interface Route {
 		title: string;
@@ -48,15 +48,13 @@
 	}
 	function checkRoute(segment: string): Route {
 		if (segment.includes('equipe')) {
-			return contents.equipe;
-		} else if (segment.includes('historique')) {
-			return contents.historique;
+			return contents[1];
+		} else if (segment.includes('matches')) {
+			return contents[2];
 		} else if (segment.includes('photos')) {
-			return contents.photos;
-		} else if (segment.includes('contact')) {
-			return contents.contact;
+			return contents[3];
 		} else {
-			return contents.bzfc;
+			return contents[0];
 		}
 	}
 	$: content = checkRoute(segment);
@@ -71,36 +69,18 @@
 	>
 		<nav class="text-center mt-6 nav:pt-0 nav:mt-0">
 			<ul class="p-0 m-0">
-				<NavElement
-					title="BZFC"
-					selected={content.href == '/' ? true : false}
-					href="/"
-					src="/img/BZFC_logo_transparent.png"
-				/>
-				<NavElement
-					title="Equipe"
-					selected={content.href.includes('/equipe') ? true : false}
-					href="/equipe"
-					src="/img/about-icon.png"
-				/>
-				<NavElement
-					title="Historique"
-					selected={content.href.includes('/historique') ? true : false}
-					href="/historique"
-					src="/img/hist-icon.png"
-				/>
-				<NavElement
-					title="Photos"
-					selected={content.href.includes('/photos') ? true : false}
-					href="/photos"
-					src="/img/projects-icon.png"
-				/>
-				<NavElement
-					title="Contact"
-					selected={content.href.includes('/contact') ? true : false}
-					href="/contact"
-					src="/img/contact-icon.png"
-				/>
+				{#each contents as { title, href, src }}
+					{#if title == 'BZFC'}
+						<NavElement {title} selected={content.href == '/' ? true : false} {href} {src} />
+					{:else}
+						<NavElement
+							{title}
+							selected={content.href.includes(href) ? true : false}
+							{href}
+							{src}
+						/>
+					{/if}
+				{/each}
 			</ul>
 		</nav>
 		<Page {content}>

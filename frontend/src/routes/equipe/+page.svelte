@@ -1,7 +1,6 @@
 <script lang="ts">
 	import Card from '$lib/components/Card.svelte';
 	import Player from '$lib/components/Player.svelte';
-	import type { IPlayer } from '$lib/interfaces/player';
 
 	import type { PageData } from './$types';
 

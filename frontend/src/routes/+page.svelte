@@ -4,23 +4,27 @@
 
 <Card>
 	<h4>Qui sommes nous ?</h4>
-	<p>
-		Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis ratione maiores possimus
-		eveniet quas exercitationem inventore, recusandae molestias. Quisquam expedita quis ducimus
-		debitis dicta sint reprehenderit, quaerat quibusdam natus incidunt.
-	</p>
-
-	<div class="nav:grid nav:grid-cols-2">
-		<div class="w-1/3 nav:w-72 mx-auto pt-10">
-			<img src="/img/BZFC_logo.png" alt="BZFC_logo" />
+	<div class="nav:flex flex-none mx-auto pt-5 w-3/4">
+		<div class="basis-1/4 pb-4">
+			<img src="/img/BZFC_logo.png" alt="BZFC_logo" width="100em" class="mx-auto" />
 		</div>
-		<iframe
-			src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=Europe%2FParis&showTitle=0&showNav=1&showPrint=0&showTabs=0&hl=fr&showCalendars=0&showTz=0&title=BZFC&src=NTQ2NTcyNTlkZTJmZDk2MDE4MDUxYzE1ODMxMWQ3OWJhZTNjYWVkMDI2YjQzMWRiNjU2MjQ4ODk2OTU0ZDg0NkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23AD1457"
-			style="border-width:0"
-			frameborder="0"
-			scrolling="no"
-			title="BZFC's calendar"
-			class="w-full h-full"
-		/>
+		<div class="basis-3/4">
+			<p class="nav:text-left nav:mx-0 mb-5">
+				Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis ratione maiores possimus
+				eveniet quas exercitationem inventore, recusandae molestias. Quisquam expedita quis ducimus
+				debitis dicta sint reprehenderit, quaerat quibusdam natus incidunt.
+			</p>
+			<a
+				href="https://www.instagram.com/bzfcofficiel/"
+				target="_blank"
+				type="button"
+				data-te-ripple-init
+				data-te-ripple-color="light"
+				class="w-min bg-yellow-400 mb-2 flex rounded px-6 py-2.5 text-xs font-medium uppercase leading-normal text-black shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg pr-9 mx-auto nav:mx-0"
+			>
+				<img src="/img/insta.png" alt="Instagram logo" width="15em" class="mr-2 h-3.5 w-3.5" />
+				Instagram
+			</a>
+		</div>
 	</div>
 </Card>

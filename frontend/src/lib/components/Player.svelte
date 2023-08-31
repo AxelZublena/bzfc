@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { urlFor } from '$lib/utils/image';
-	import type { IPlayer } from '$lib/interfaces/player';
+	import type { IPlayer } from '$lib/interfaces/IPlayer';
 
 	export let player: IPlayer;
 </script>
