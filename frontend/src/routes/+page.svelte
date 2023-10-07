@@ -3,16 +3,19 @@
 </script>
 
 <Card>
-	<h4>Qui sommes nous ?</h4>
+	<!-- <h4>Qui sommes nous ?</h4> -->
 	<div class="nav:flex flex-none mx-auto pt-5 w-3/4">
 		<div class="basis-1/4 pb-4">
 			<img src="/img/BZFC_logo.png" alt="BZFC_logo" width="100em" class="mx-auto" />
 		</div>
 		<div class="basis-3/4">
 			<p class="nav:text-left nav:mx-0 mb-5">
-				Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis ratione maiores possimus
-				eveniet quas exercitationem inventore, recusandae molestias. Quisquam expedita quis ducimus
-				debitis dicta sint reprehenderit, quaerat quibusdam natus incidunt.
+				Le BZFC est un club de foot amical et amateur composé d’amoureux du ballon, pas tous inné
+				d’un talent hors du commun avec leurs pieds.., mais l’équipe, et la mentalité collective
+				passe avant tout. Bienvenue dans notre histoire, qui part d’une blague, mais qui peut être
+				bien plus!
+				<br />
+				Aller le foot, aller le club!! &#128155;&#128420;
 			</p>
 			<a
 				href="https://www.instagram.com/bzfcofficiel/"

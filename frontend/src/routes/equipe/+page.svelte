@@ -8,7 +8,7 @@
 </script>
 
 <Card>
-	<h4>Les joueurs</h4>
+	<!-- <h4>Les joueurs</h4> -->
 	{#if data.players.length}
 		<div class="-mb-8">
 			{#each data.players as player}

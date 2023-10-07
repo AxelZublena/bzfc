@@ -5,6 +5,8 @@ export default {
         extend: {},
         borderWidth: {
             "15": "15px",
+            "2": "2px",
+            "1": "1px",
         },
         screens: {
             'nav': '850px',

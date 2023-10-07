@@ -6,6 +6,7 @@ import groq from 'groq';
 import { PUBLIC_SANITY_DATASET, PUBLIC_SANITY_PROJECT_ID } from '$env/static/public';
 import type { IPlayer } from '$lib/interfaces/IPlayer';
 import type { IMatch } from '$lib/interfaces/IMatch';
+import type { IPhoto } from '$lib/interfaces/IPhoto';
 
 if (!PUBLIC_SANITY_PROJECT_ID || !PUBLIC_SANITY_DATASET) {
     throw new Error('Did you forget to run sanity init --env?');
@@ -33,6 +34,12 @@ export async function getPost(slug: string): Promise<Post> {
 export async function getPlayers(): Promise<IPlayer[]> {
     return await client.fetch(
         groq`*[_type == "player"] | order(_createdAt desc)`
+    );
+}
+
+export async function getPhotos(): Promise<IPhoto[]> {
+    return await client.fetch(
+        groq`*[_type == "photo"] | order(_createdAt desc)`
     );
 }
 

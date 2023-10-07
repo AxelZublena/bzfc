@@ -6,12 +6,18 @@ export default defineType({
     type: 'document',
     fields: [
         defineField({
+            name: 'title',
+            title: 'Titre',
+            type: 'string',
+            validation: (Rule) => Rule.required(),
+        }),
+        defineField({
             name: 'slug',
             title: 'Slug',
             type: 'slug',
             validation: (Rule) => Rule.required(),
             options: {
-                source: (doc) => `${doc.date}+${Math.floor(Math.random() * 1000)}+${doc.equipeAdverse}`,
+                source: (doc) => `${doc.title}+${doc.date}`,
                 maxLength: 255,
             },
         }),
@@ -40,7 +46,7 @@ export default defineType({
             validation: (Rule) => Rule.required(),
         }),
         defineField({
-            name: 'image',
+            name: 'img',
             title: 'Image',
             type: 'image',
             validation: (Rule) => Rule.required(),

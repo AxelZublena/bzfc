@@ -15,20 +15,20 @@
 			src: '/img/BZFC_logo_transparent.png'
 		},
 		{
-			title: "L'equipe",
-			text: "Text pour l'equipe",
+			title: "L'équipe",
+			text: "Présentation de l'équipe",
 			href: '/equipe',
 			src: '/img/about-icon.png'
 		},
 		{
 			title: 'Matches',
-			text: 'Text pour les matches',
+			text: '',
 			href: '/matches',
 			src: '/img/hist-icon.png'
 		},
 		{
 			title: 'Photos',
-			text: 'Text pour les photos',
+			text: '',
 			href: '/photos',
 			src: '/img/projects-icon.png'
 		}

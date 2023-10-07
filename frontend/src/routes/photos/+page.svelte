@@ -1,41 +1,50 @@
 <script lang="ts">
 	import Card from '$lib/components/Card.svelte';
 	import Photo from '$lib/components/Photo.svelte';
+	import { urlFor } from '$lib/utils/image';
 	import type { IPhoto } from '$lib/interfaces/IPhoto';
+
+	import type { PageData } from './$types';
+
+	export let data: PageData;
+	let photos: IPhoto[] = data.photos;
+
+	photos.forEach((photo, id) => (photo.id = id));
+	console.log(photos);
 
 	let modalHidden = true;
 
-	let photos: Array<IPhoto> = [
-		{
-			id: 0,
-			title: 'Image 1',
-			date: '08/30/2022',
-			img: 'https://flowbite.s3.amazonaws.com/docs/gallery/square/image.jpg'
-		},
-		{
-			id: 1,
-			title: 'Image 2',
-			date: '08/30/2023',
-			img: '/img/BZFC_logo.png'
-		},
-		{
-			id: 2,
-			title: 'Image 3',
-			date: '08/30/2023',
-			img: 'https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg'
-		},
-		{
-			id: 3,
-			title: 'Image 4',
-			date: '08/30/2023',
-			img: '/img/BZFC_logo.png'
-		}
-	];
+	/* let photos: Array<IPhoto> = [ */
+	/* 	{ */
+	/* 		id: 0, */
+	/* 		title: 'Image 1', */
+	/* 		date: '08/30/2022', */
+	/* 		img: 'https://flowbite.s3.amazonaws.com/docs/gallery/square/image.jpg' */
+	/* 	}, */
+	/* 	{ */
+	/* 		id: 1, */
+	/* 		title: 'Image 2', */
+	/* 		date: '08/30/2023', */
+	/* 		img: '/img/BZFC_logo.png' */
+	/* 	}, */
+	/* 	{ */
+	/* 		id: 2, */
+	/* 		title: 'Image 3', */
+	/* 		date: '08/30/2023', */
+	/* 		img: 'https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg' */
+	/* 	}, */
+	/* 	{ */
+	/* 		id: 3, */
+	/* 		title: 'Image 4', */
+	/* 		date: '08/30/2023', */
+	/* 		img: '/img/BZFC_logo.png' */
+	/* 	} */
+	/* ]; */
 	let currentPhoto: IPhoto = photos[0];
 </script>
 
 <Card>
-	<h4>Photos</h4>
+	<!-- <h4>Photos</h4> -->
 	<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4">
 		{#each photos as photo}
 			<div
@@ -89,7 +98,7 @@
 		</button>
 
 		<img
-			src={currentPhoto.img}
+			src={urlFor(currentPhoto.img).url()}
 			alt="img"
 			class="absolute z-40 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 max-h-full max-w-full mt-10"
 		/>

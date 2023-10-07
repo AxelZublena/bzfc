@@ -6,14 +6,14 @@
 </script>
 
 <div class="sm:flex gap-10 mx-8 mb-8">
-	<div class="w-1/6 mx-auto sm:mx-0">
+	<div class="w-1/6 mx-auto sm:mx-0 hidden sm:block">
 		<img
 			src={urlFor(player.img).url()}
 			alt="BZFC_logo"
-			class="object-cover rounded-sm mx-auto max-h-1/2"
+			class="object-cover rounded-sm mx-auto max-h-36"
 		/>
 	</div>
-	<div class="sm:w-5/6 text-left">
+	<div class="sm:w-5/6 sm:text-left text-center">
 		<h5>{player.name}</h5>
 		<p>{player.description}</p>
 		<p><b>Position:</b> {player.position}</p>
