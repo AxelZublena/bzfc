@@ -2,6 +2,10 @@
 	import Card from '$lib/components/Card.svelte';
 </script>
 
+<svelte:head>
+	<meta name="google-site-verification" content="ih6C1bTZD7wiw72RWGQUUGJerIN8j12kmGAasoTcR9o" />
+</svelte:head>
+
 <Card>
 	<!-- <h4>Qui sommes nous ?</h4> -->
 	<div class="nav:flex flex-none mx-auto pt-5 w-3/4">
