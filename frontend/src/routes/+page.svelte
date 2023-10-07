@@ -10,12 +10,12 @@
 		</div>
 		<div class="basis-3/4">
 			<p class="nav:text-left nav:mx-0 mb-5">
-				Le BZFC est un club de foot amical et amateur composé d’amoureux du ballon, pas tous inné
+				Le BZFC est un club de foot amical et amateur composé d’amoureux du ballon, pas tous innés
 				d’un talent hors du commun avec leurs pieds.., mais l’équipe, et la mentalité collective
 				passe avant tout. Bienvenue dans notre histoire, qui part d’une blague, mais qui peut être
 				bien plus!
 				<br />
-				Aller le foot, aller le club!! &#128155;&#128420;
+				Allez le foot, allez le club!! &#128155;&#128420;
 			</p>
 			<a
 				href="https://www.instagram.com/bzfcofficiel/"

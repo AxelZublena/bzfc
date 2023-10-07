@@ -34,7 +34,7 @@
 		</div>
 
 		<a
-			href="/matches"
+			href="/matchs"
 			type="button"
 			data-te-ripple-init
 			data-te-ripple-color="light"

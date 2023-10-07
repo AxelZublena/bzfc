@@ -59,10 +59,10 @@
 						>
 						<td class="whitespace-nowrap pr-2 nav:px-6 py-4 text-end nav:w-48">
 							<a
-								href={`/matches/${match.slug.current}`}
+								href={`/matchs/${match.slug.current}`}
 								class="hidden nav:block underline underline-offset-4">En Savoir Plus</a
 							>
-							<a href={`/matches/${match.slug.current}`} class="nav:hidden">&#9432;</a>
+							<a href={`/matchs/${match.slug.current}`} class="nav:hidden">&#9432;</a>
 						</td>
 					</tr>
 				{/each}
@@ -94,10 +94,10 @@
 						</td>
 						<td class="whitespace-nowrap pr-2 nav:px-6 py-4 text-end nav:w-48">
 							<a
-								href={`/matches/${match.slug.current}`}
+								href={`/matchs/${match.slug.current}`}
 								class="hidden nav:block underline underline-offset-4">En Savoir Plus</a
 							>
-							<a href={`/matches/${match.slug.current}`} class="nav:hidden">&#9432;</a>
+							<a href={`/matchs/${match.slug.current}`} class="nav:hidden">&#9432;</a>
 						</td>
 					</tr>
 				{/each}
