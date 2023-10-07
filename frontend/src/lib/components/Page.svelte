@@ -18,7 +18,7 @@
 	onDestroy(unsubscribe);
 </script>
 
-{#if wins != '' && content.href == '/matches'}
+{#if wins != '' && content.href == '/matchs'}
 	<Title title={content.title} text={wins + ' victoire(s)'} />
 {:else}
 	<Title title={content.title} text={content.text} />

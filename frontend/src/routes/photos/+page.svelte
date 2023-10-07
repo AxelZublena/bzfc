@@ -10,36 +10,8 @@
 	let photos: IPhoto[] = data.photos;
 
 	photos.forEach((photo, id) => (photo.id = id));
-	console.log(photos);
 
 	let modalHidden = true;
-
-	/* let photos: Array<IPhoto> = [ */
-	/* 	{ */
-	/* 		id: 0, */
-	/* 		title: 'Image 1', */
-	/* 		date: '08/30/2022', */
-	/* 		img: 'https://flowbite.s3.amazonaws.com/docs/gallery/square/image.jpg' */
-	/* 	}, */
-	/* 	{ */
-	/* 		id: 1, */
-	/* 		title: 'Image 2', */
-	/* 		date: '08/30/2023', */
-	/* 		img: '/img/BZFC_logo.png' */
-	/* 	}, */
-	/* 	{ */
-	/* 		id: 2, */
-	/* 		title: 'Image 3', */
-	/* 		date: '08/30/2023', */
-	/* 		img: 'https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg' */
-	/* 	}, */
-	/* 	{ */
-	/* 		id: 3, */
-	/* 		title: 'Image 4', */
-	/* 		date: '08/30/2023', */
-	/* 		img: '/img/BZFC_logo.png' */
-	/* 	} */
-	/* ]; */
 	let currentPhoto: IPhoto = photos[0];
 </script>
 

@@ -21,9 +21,9 @@
 			src: '/img/about-icon.png'
 		},
 		{
-			title: 'Matches',
+			title: 'Matchs',
 			text: '',
-			href: '/matches',
+			href: '/matchs',
 			src: '/img/hist-icon.png'
 		},
 		{
@@ -49,7 +49,7 @@
 	function checkRoute(segment: string): Route {
 		if (segment.includes('equipe')) {
 			return contents[1];
-		} else if (segment.includes('matches')) {
+		} else if (segment.includes('matchs')) {
 			return contents[2];
 		} else if (segment.includes('photos')) {
 			return contents[3];
